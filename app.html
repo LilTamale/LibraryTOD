@@ -1,36 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<!Doctype html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library App</title>
-    <style src="styles.css"></style>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Library</title>
 </head>
 <body>
-    <nav> <h1> Library App </h1></nav>
-    <div>
-        <button id="add-a-book">Add a Book</button>
+<h1>Library Project</h1>
+    <div id='newBtn-Container'>
+        <button id='newBtn'>+ New Book</button>
     </div>
-    <div class="book-form">
-        <form action="" id="form-submission" style="display:none">
-            <label for="Author">Author:</label>
-            <input type="text" id="book-title" required>
-
-            <label for="book-title">Book Title</label>
-            <input type="text" id="book-title" required>
-
-            <label for="pages">Amount of Pages:</label>
-            <input type="text" id="pages">
-
-            <label for="read">Read</label>
-            <input type="text" id="read">
+     <div id="popUp">
+        <form id='form' action='/app.js'>
+            <span class="close">&times;</span>
+            <ledgend>New Book</ledgend>
+            <div id='textInput'> 
+                <p><input type='text' id='title' name='title' placeholder='Title'></p>
+                <p><input type='text' id='author' name='author' placeholder='Author'></p>
+                <p><input type='text' id='pages' name='pages' placeholder='Pages'></p>
+            </div>
+            <div id='checkBox'>
+                <p><label >Read: </label><input type='checkbox' id='read' name='read' value='yes'></p>
+            </div>
+            <button type='submit' form='form' id='addBtn'>Add</button>
         </form>
     </div>
-    <div class="book-addition">
+    <div id='Library-container'></div>
 
-
-    </div>
+    <script src="app.js"></script>
 </body>
-<script src="app.js"></script>
+
 </html>
+
